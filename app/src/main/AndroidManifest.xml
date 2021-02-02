@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.sherlock">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <meta-data
+            android:name="xposedmodule"
+            android:value="true" />
+
+        <!--模块说明，一般为模块的功能描述-->
+        <meta-data
+            android:name="xposeddescription"
+            android:value="这个模块用来检测用户隐私合规的，在用户未授权同意前调用接口获取信息属于违规。" />
+
+        <!--模块兼容版本-->
+        <meta-data
+            android:name="xposedminversion"
+            android:value="54" />
+
+    </application>
+
+</manifest>
